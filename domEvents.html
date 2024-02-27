@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Playing with DOM</title>
+  <style>
+    div#area {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 20px;
+      background-color: blue;
+      color: aliceblue;
+      width: 200px;
+      height: 200px;
+      line-height: 200px;
+      text-align: center;
+      border-radius: 16px;
+    }
+  </style>
+</head>
+<body>
+  
+<div id="area">
+  Do not click here!
+</div>
+
+<script>
+  let a = document.getElementById('area')
+  a.addEventListener('click', clicked)
+  a.addEventListener('mouseenter', entered)
+  a.addEventListener('mouseout', gotOut)
+
+  function clicked() {
+    a.innerText = 'You clicked! =O'
+    a.style.background = 'green'
+  }
+  function entered() {
+    a.innerText = "Don't do that! =|"
+    a.style.background = 'red'
+  }
+  function gotOut() {
+    a.innerText = "Do not click here!"
+    a.style.background = 'blue'
+  } 
+
+</script>
+</body>
+</html>
