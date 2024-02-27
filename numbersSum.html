@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Numbers Sum</title>
+  <style>
+    body {
+      font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+    }
+    input {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      width: 40px;
+    }
+    div#result {
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Numbers Sum</h1>
+  <input type="number" name="txtNumber1" id="txtNumber1"> +
+  <input type="number" name="txtNumber2" id="txtNumber2">
+  <input type="button" value="Sum" id="button" onclick="sum()">
+  <div id="result">
+    Result
+  </div>
+  <script>
+    function sum() {
+      let tn1 = document.getElementById('txtNumber1')
+      let tn2 = document.querySelector('#txtNumber2')
+      let res = document.getElementById('result')
+      let number1 = Number(tn1.value)
+      let number2 = Number(tn2.value)
+      let sum = number1 + number2
+      res.innerHTML = `${number1} + ${number2} = <strong>${sum}</strong>`
+    }
+  </script>
+</body>
+</html>
