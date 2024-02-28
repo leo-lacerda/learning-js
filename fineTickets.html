@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fine Tickets System</title>
+</head>
+<body>
+  <h1>Fine Tickets System</h1>
+  Car speed: <input type="number" name="carSpeed" id="carSpeed"> km/h
+  <input type="button" value="Check" onclick="check()">
+  <div id="result">
+
+  </div>
+  <script>
+    function check() {
+      let speedTxt = document.getElementById('carSpeed')
+      let result = document.getElementById('result')
+      let speed = Number(speedTxt.value)
+      result.innerHTML = `<p>Your speed was <strong>${speed}km/h!</strong></p>`
+      if (speed > 60) {
+        result.innerHTML += `<p>Your above the speed limit! Here's your ticket!</p>`
+      } else {
+        result.innerHTML += `<p>Drive safe!</p>`
+      }
+      
+    }
+  </script>
+</body>
+</html>
