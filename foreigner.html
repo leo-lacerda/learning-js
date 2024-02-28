@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Are you a foreigner?</title>
+</head>
+<body>
+  Where are you from (what's your Country)? <input type="text" name="country" id="country">
+  <input type="button" value="Check" onclick="check()">
+  <div id="result">
+
+  </div>
+
+  <script>
+    function check() {
+      let country = document.getElementById('country').value
+      let result = document.getElementById('result')
+      result.innerHTML = `<p>So you're from ${country}...</p>`
+      if (country == "Brazil") {
+        result.innerHTML += `<p>So you're Brazilian too!</p>`
+      } else {
+        result.innerHTML += `<p>So you're a foreigner</p>`
+      }
+    }
+  </script>
+
+</body>
+</html>
